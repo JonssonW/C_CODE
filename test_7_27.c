@@ -1,226 +1,239 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-#include <stdio.h>
+include <stdio.h>
 
-//int main()
-//{
-//	while (1)
-//		printf("hehe\n");
-//
-//	return 0;
-//}
-//
-//int main()
-//{
-//	int i = 1;
-//	//ÔÚwhileÑ­»·ÖĞ£¬breakÓÃÓÚÓÀ¾ÃµÄÖÕÖ¹Ñ­»·
-//	// 
-//	//ÔÚwhileÑ­»·ÖĞ£¬continueµÄ×÷ÓÃÊÇÌø¹ı±¾´ÎÑ­»·continueºó±ßµÄ´úÂë
-//	//Ö±½ÓÈ¥ÅĞ¶Ï²¿·Ö£¬¿´ÊÇ·ñ½øĞĞÏÂÒ»´ÎÑ­»·
-//
-//	while (i <= 10)
-//	{
-//		if (i == 5)
-//			continue;
-//		printf("%d ", i);
-//		i++;
-//	}
-//
-//	/*while (i <= 10)
-//	{
-//		if (i == 5)
-//			break;
-//
-//		printf("%d ", i);
-//		i++;
-//	}*/
-//
-//	return 0;
-//}
+int main()
+{
+	while (1)
+		printf("hehe\n");
+
+	return 0;
+}
+
+
+
+int main()
+{
+	int i = 1;
+	//åœ¨whileå¾ªç¯ä¸­ï¼Œbreakç”¨äºæ°¸ä¹…çš„ç»ˆæ­¢å¾ªç¯
+	// 
+	//åœ¨whileå¾ªç¯ä¸­ï¼Œcontinueçš„ä½œç”¨æ˜¯è·³è¿‡æœ¬æ¬¡å¾ªç¯continueåè¾¹çš„ä»£ç 
+	//ç›´æ¥å»åˆ¤æ–­éƒ¨åˆ†ï¼Œçœ‹æ˜¯å¦è¿›è¡Œä¸‹ä¸€æ¬¡å¾ªç¯
+
+	while (i <= 10)
+	{
+		if (i == 5)
+			continue;
+		printf("%d ", i);
+		i++;
+	}
+
+	/*while (i <= 10)
+	{
+		if (i == 5)
+			break;
+
+		printf("%d ", i);
+		i++;
+	}*/
+
+	return 0;
+}
 
 
 //getchar
 
-//EOF - end of file - ÎÄ¼ş½áÊø±êÖ¾
+//EOF - end of file - æ–‡ä»¶ç»“æŸæ ‡å¿—
 
-//int main()
-//{
-//	int ch = getchar();
-//	//printf("%c\n", ch);
-//	putchar(ch);//Êä³öÒ»¸ö×Ö·û
-//	return 0;
-//}
-//
-//int main()
-//{
-//	int ch = 0;
-//	//ctrl+z - getchar ¾Í¶ÁÈ¡½áÊø
-//
-//	while ((ch = getchar()) != EOF)
-//	{
-//		putchar(ch);
-//	}
-//
-//	return 0;
-//}
+int main()
+{
+	int ch = getchar();
+	//printf("%c\n", ch);
+	putchar(ch);//è¾“å‡ºä¸€ä¸ªå­—ç¬¦
+	return 0;
+}
 
+int main()
+{
+	int ch = 0;
+	//ctrl+z - getchar å°±è¯»å–ç»“æŸ
 
-//EOF  ±¾ÖÊÊÇ-1 getchar ·µ»ØÖµÀàĞÍÎªint
-//
-//int main()
-//{
-//	//
-//	char password[20] = { 0 };
-//	printf("ÇëÊäÈëÃÜÂë:>");
-//	scanf("%s", password);//123456
-//	//gets
-//	printf("ÇëÈ·ÈÏÃÜÂë(Y/N):>");
-//	//ÇåÀí»º³åÇø
-//	//getchar();//´¦Àí'\n'
-//	// 
-//	//ÇåÀí»º³åÇøµÄÖĞ¶à¸ö×Ö·û
-//	int tmp = 0;
-//	while ((tmp = getchar()) != '\n')
-//	{
-//		;
-//	}
-//
-//	int ch = getchar();
-//	if (ch == 'Y')
-//	{
-//		printf("È·ÈÏ³É¹¦\n");
-//	}
-//	else
-//	{
-//		printf("È·ÈÏÊ§°Ü\n");
-//	}
-//	return 0;
-//}
+	while ((ch = getchar()) != EOF)
+	{
+		putchar(ch);
+	}
+
+	return 0;
+}
 
 
 
-//int main()
-//{
-//	int ch = 0;
-//	while ((ch=getchar()) != EOF)
-//	{
-//		if (ch < '0' || ch>'9')   //0~9µÄASCIIÂë±íÊÇ48-57 £¬±íÊ¾³ıÁË48-57±ğµÄ¶¼²»·ûºÏÌõ¼ş
-//			continue;
-//
-//		putchar(ch);
-//	}
-//	return 0;
-//}
+//EOF  æœ¬è´¨æ˜¯-1 getchar è¿”å›å€¼ç±»å‹ä¸ºint
+
+int main()
+{
+	//
+	char password[20] = { 0 };
+	printf("è¯·è¾“å…¥å¯†ç :>");
+	scanf("%s", password);//123456
+	//gets
+	printf("è¯·ç¡®è®¤å¯†ç (Y/N):>");
+	//æ¸…ç†ç¼“å†²åŒº
+	//getchar();//å¤„ç†'\n'
+	// 
+	//æ¸…ç†ç¼“å†²åŒºçš„ä¸­å¤šä¸ªå­—ç¬¦
+	int tmp = 0;
+	while ((tmp = getchar()) != '\n')
+	{
+		;
+	}
+	int ch = getchar();
+	if (ch == 'Y')
+	{
+		printf("ç¡®è®¤æˆåŠŸ\n");
+	}
+	else
+	{
+		printf("ç¡®è®¤å¤±è´¥\n");
+	}
+	return 0;
+}
 
 
 
-//int main()
-//{
-//	int i = 1;//³õÊ¼»¯
-//
-//	while (i <= 10)//ÅĞ¶Ï²¿·Ö
-//	{
-//		printf("%d ", i);
-//		i++;//µ÷Õû²¿·Ö
-//	}
-//
-//	return 0;
-//}
-//
-//int main()
-//{
-//	int i = 0;
-//
-//	for (i = 1; i <= 10; i++)
-//	{
-//		//if (i == 5)
-//		//	break;
-//		if (i == 5)
-//			continue;
-//
-//		printf("%d ", i);
-//	}
-//
-//	return 0;
-//}
+int main()
+{
+	int ch = 0;
+	while ((ch=getchar()) != EOF)
+	{
+		if (ch < '0' || ch>'9')   //0~9çš„ASCIIç è¡¨æ˜¯48-57 ï¼Œè¡¨ç¤ºé™¤äº†48-57åˆ«çš„éƒ½ä¸ç¬¦åˆæ¡ä»¶
+			continue;
 
-//Ñ­»·ÌåÄÚ¸Ä±äÑ­»·±äÁ¿µÄÀı×Ó
-// 
-//int main()
-//{
-//	int i = 0;
-//	for (i = 1; i <= 10; i++)
-//	{
-//		printf("%d ", i);
-//		int j = 0;
-//		for (j = 0; j < 10; i++)
-//		{
-//			printf("hehe\n");
-//		}
-//	}
-//	return 0;
-//}
+		putchar(ch);
+	}
+	return 0;
+}
 
 
-//int main()
-//{
-//	int arr[10] = { 0 };
-//	int i = 0;
-//	for (i = 0; i < 10; i++)
-//	{
-//		printf("%d ", arr[i]);
-//	}
-//	return 0;
-//}
+
+int main()
+{
+	int i = 1;//åˆå§‹åŒ–
+
+	while (i <= 10)//åˆ¤æ–­éƒ¨åˆ†
+	{
+		printf("%d ", i);
+		i++;//è°ƒæ•´éƒ¨åˆ†
+	}
+
+	return 0;
+}
 
 
-//int main()
-//{
-//	//ÅĞ¶Ï²¿·ÖµÄÊ¡ÂÔ - ÅĞ¶Ï²¿·ÖºãÎªÕæ
-//	for (;;)
-//	{
-//		printf("hehe\n");
-//	}
-//	return 0;
-//}
-//
-//int main()
-//{
-//	int i = 0;
-//	int j = 0;
-//	for (; i < 3; i++)
-//	{
-//		for (; j < 3; j++)
-//		{
-//			printf("hehe\n");
-//		}
-//	}
-//
-//	return 0;
-//}
 
-//int main()
-//{
-//	int i = 1;
-//	do
-//	{
-//		if (i == 5)
-//			break;
-//
-//		printf("%d ", i);
-//		i++;
-//	} while (i<=10);
-//
-//	printf("hehe\n");
-//	return 0;
-//}
+int main()
+{
+	int i = 0;
+
+	for (i = 1; i <= 10; i++)
+	{
+		//if (i == 5)
+		//	break;
+		if (i == 5)
+			continue;
+
+		printf("%d ", i);
+	}
+
+	return 0;
+}
+
+
+
+å¾ªç¯ä½“å†…æ”¹å˜å¾ªç¯å˜é‡çš„ä¾‹å­
+ 
+int main()
+{
+	int i = 0;
+	for (i = 1; i <= 10; i++)
+	{
+		printf("%d ", i);
+		int j = 0;
+		for (j = 0; j < 10; i++)
+		{
+			printf("hehe\n");
+		}
+	}
+	return 0;
+}
+
+
+
+int main()
+{
+	int arr[10] = { 0 };
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	return 0;
+}
+
+
+
+int main()
+{
+	//åˆ¤æ–­éƒ¨åˆ†çš„çœç•¥ - åˆ¤æ–­éƒ¨åˆ†æ’ä¸ºçœŸ
+	for (;;)
+	{
+		printf("hehe\n");
+	}
+	return 0;
+}
+
+
+
+int main()
+{
+	int i = 0;
+	int j = 0;
+	for (; i < 3; i++)
+	{
+		for (; j < 3; j++)
+		{
+			printf("hehe\n");
+		}
+	}
+
+	return 0;
+}
+
+
+
+int main()
+{
+	int i = 1;
+	do
+	{
+		if (i == 5)
+			break;
+
+		printf("%d ", i);
+		i++;
+	} while (i<=10);
+
+	printf("hehe\n");
+	return 0;
+}
+
 
 
 int main()
 {
 	int i = 0;
 	int k = 0;
-	for (i = 0, k = 0; k = 0; i++, k++)  //k=0, °Ñ0¸³Öµ¸øk£¬ ÅĞ¶Ï²¿·ÖºãÎª¼Ù£¬ÔòÒ»´Î¶¼²»Ö´ĞĞ
-		//k==0 ÊÇÅĞ¶ÏkÊÇ·ñµÈÓÚ0£»
+	for (i = 0, k = 0; k = 0; i++, k++)  //k=0, æŠŠ0èµ‹å€¼ç»™kï¼Œ åˆ¤æ–­éƒ¨åˆ†æ’ä¸ºå‡ï¼Œåˆ™ä¸€æ¬¡éƒ½ä¸æ‰§è¡Œ
+		//k==0 æ˜¯åˆ¤æ–­kæ˜¯å¦ç­‰äº0ï¼›
 	{
 		k++;
 	}
