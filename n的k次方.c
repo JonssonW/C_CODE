@@ -22,3 +22,4 @@ int main()
 	printf("%.2f\n", ret);
 	return 0;
 }
+
