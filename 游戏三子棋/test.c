@@ -12,42 +12,42 @@ void menu()
 
 void game()
 {
-	//´æ´¢Êı¾İ - ¶şÎ¬Êı×é
+	//å­˜å‚¨æ•°æ® - äºŒç»´æ•°ç»„
 	char board[ROW][COL];
-	//³õÊ¼»¯ÆåÅÌ - ³õÊ¼»¯¿Õ¸ñ
+	//åˆå§‹åŒ–æ£‹ç›˜ - åˆå§‹åŒ–ç©ºæ ¼
 	InitBoard(board, ROW, COL);
 
-	//´òÓ¡Ò»ÏÂÆåÅÌ - ±¾ÖÊÊÇ´òÓ¡Êı×éµÄÄÚÈİ
+	//æ‰“å°ä¸€ä¸‹æ£‹ç›˜ - æœ¬è´¨æ˜¯æ‰“å°æ•°ç»„çš„å†…å®¹
 	DisplayBoard(board, ROW, COL);
-	char ret = 0;//½ÓÊÜÓÎÏ·×´Ì¬
+	char ret = 0;//æ¥å—æ¸¸æˆçŠ¶æ€
 	while (1)
 	{
-		//Íæ¼ÒÏÂÆå
+		//ç©å®¶ä¸‹æ£‹
 		PlayerMove(board, ROW, COL);
 		DisplayBoard(board, ROW, COL);
-		//ÅĞ¶ÏÍæ¼ÒÊÇ·ñÓ®µÃÓÎÏ·
+		//åˆ¤æ–­ç©å®¶æ˜¯å¦èµ¢å¾—æ¸¸æˆ
 		ret = IsWin(board, ROW, COL);
 		if (ret != 'C')
 			break;
-		//µçÄÔÏÂÆå
+		//ç”µè„‘ä¸‹æ£‹
 		ComputerMove(board, ROW, COL);
 		DisplayBoard(board, ROW, COL);
-		//ÅĞ¶ÏµçÄÔÊÇ·ñÓ®µÃÓÎÏ·
+		//åˆ¤æ–­ç”µè„‘æ˜¯å¦èµ¢å¾—æ¸¸æˆ
 		ret = IsWin(board, ROW, COL);
 		if (ret != 'C')
 			break;
 	}
 	if (ret == '*')
 	{
-		printf("Íæ¼ÒÓ®ÁË\n");
+		printf("ç©å®¶èµ¢äº†\n");
 	}
 	else if(ret == '#')
 	{
-		printf("µçÄÔÓ®ÁË\n");
+		printf("ç”µè„‘èµ¢äº†\n");
 	}
 	else
 	{
-		printf("Æ½¾Ö\n");
+		printf("å¹³å±€\n");
 	}
 	DisplayBoard(board, ROW, COL);
 }
@@ -60,7 +60,7 @@ int main()
 	do
 	{
 		menu();
-		printf("ÇëÑ¡Ôñ:>");
+		printf("è¯·é€‰æ‹©:>");
 		scanf("%d", &input);
 		switch (input)
 		{
@@ -68,14 +68,17 @@ int main()
 			game();
 			break;
 		case 0:
-			printf("ÍË³öÓÎÏ·\n");
+			printf("é€€å‡ºæ¸¸æˆ\n");
 			break;
 		default:
-			printf("Ñ¡Ôñ´íÎó£¬ÖØĞÂÑ¡Ôñ\n");
+			printf("é€‰æ‹©é”™è¯¯ï¼Œé‡æ–°é€‰æ‹©\n");
 			break;
 		}
 	} while (input);
 
 	return 0;
 }
+
+
+
 
