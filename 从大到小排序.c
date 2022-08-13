@@ -3,7 +3,7 @@
 int main()
 {
 	int a, b, c;
-	printf("请输入3个不同的数值：");
+	printf("脟毛脢盲脠毛3赂枚虏禄脥卢碌脛脢媒脰碌拢潞");
 	scanf("%d %d %d", &a,&b,&c);
 	if (a < b)
 	{
