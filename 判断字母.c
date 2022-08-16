@@ -8,13 +8,14 @@ int main()
 		if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
 		{
 			printf("YES");
-			getchar();
+			//getchar();
 		}
 		else
 		{
 			printf("NO");
-			getchar();
+			//getchar();
 		}
+		getchar();
 	}
 	return 0;
 }
