@@ -1,35 +1,36 @@
 #pragma once
 
-//Í·ÎÄ¼şµÄ°üº¬
+//å¤´æ–‡ä»¶çš„åŒ…å«
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 
-//·ûºÅµÄ¶¨Òå
+//ç¬¦å·çš„å®šä¹‰
 #define ROW 3
 #define COL 3
 
-//º¯ÊıµÄÉùÃ÷
+//å‡½æ•°çš„å£°æ˜
 
-//³õÊ¼»¯ÆåÅÌµÄ
+//åˆå§‹åŒ–æ£‹ç›˜çš„
 void InitBoard(char board[ROW][COL], int row, int col);
 
-//´òÓ¡ÆåÅÌµÄº¯Êı
+//æ‰“å°æ£‹ç›˜çš„å‡½æ•°
 void DisplayBoard(char board[ROW][COL], int row, int col);
 
-//Íæ¼ÒÏÂÆå
+//ç©å®¶ä¸‹æ£‹
 void PlayerMove(char board[ROW][COL], int row, int col);
 
-//µçÄÔÏÂÆå
+//ç”µè„‘ä¸‹æ£‹
 void ComputerMove(char board[ROW][COL], int row, int col);
 
 //
-//1. Íæ¼ÒÓ®ÁË - *
-//2. µçÄÔÓ®ÁË - #
-//3. Æ½¾Ö - Q
-//4. ÓÎÏ·¼ÌĞø - C
+//1. ç©å®¶èµ¢äº† - *
+//2. ç”µè„‘èµ¢äº† - #
+//3. å¹³å±€ - Q
+//4. æ¸¸æˆç»§ç»­ - C
 
-//ÅĞ¶ÏÓÎÏ·ÊÇ·ñÓĞÊäÓ®
+//åˆ¤æ–­æ¸¸æˆæ˜¯å¦æœ‰è¾“èµ¢
 char IsWin(char board[ROW][COL], int row, int col);
+
 
