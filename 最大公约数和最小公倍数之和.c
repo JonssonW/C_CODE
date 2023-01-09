@@ -5,41 +5,33 @@ int main()
 	long long  m = 0;
 	long long  n = 0;
 	scanf("%lld %lld", &m, &n);
-	long long m1 = m;
-	long long n1 = n;
-	long long y = 0;
+	long long t = 0;
+	long long  m1 = m;
+	long long  n1 = n;
 	//最大公约数
 	//大数除以小数（再除以余数） 直到余数为0
-	while (m>n)
+	if (m<n)
 	{
-		if (m%n != 0)
-			n = m%n;
-		else
-		{
-			y = n;
-			break;
-		}
+		t = m;
+		m = n;
+		n = t;
 	}
-	while (m < n)
+	while (n != 0)
 	{
-		if (n%m != 0)
-			m = n%m;
-		else
-		{
-			y = m;
-			break;
-		}
+		t = m%n;
+		m = n;
+		n = t;
 	}
+	//m即为最大公约数
+	
 	
 
 	//最小公倍数
 	//两数相乘 再除以最大公约数
-	long long b = 0;
-	b = m1*n1 / y;
-	
-	
+	long long i = 0;
+	i = m1*n1 / m;
 	long long sum = 0;
-	sum = y + b;
+	sum = m + i;
 	printf("%lld", sum);
 	return 0;
 }
